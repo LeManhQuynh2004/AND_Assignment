@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Product_Fragment">
+
+    <LinearLayout
+        android:id="@+id/My_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:padding="6dp">
+
+        <TextView
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_16sp"
+            android:id="@+id/txt_Normal"
+            android:text="Bình Thường"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="20dp"
+            android:background="@color/white" />
+
+        <TextView
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_16sp"
+            android:id="@+id/txt_Order_by_title"
+            android:text="Tên"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="20dp"
+            android:background="@color/white" />
+        <TextView
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_16sp"
+            android:id="@+id/txt_Order_by_Price"
+            android:text="Giá"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecyclerView_Product"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/My_layout"
+        android:padding="5dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="40dp" />
+</RelativeLayout>
+
+
